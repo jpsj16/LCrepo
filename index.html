@@ -44,20 +44,17 @@
     <option value = "multiple">multiple</option>
     <option value = "boolean">boolean</option>
     </select>
-<!--     <input ng-model = "questionAmount"></input>
-    <input ng-model = "questionCategory"></input>
-    <input ng-model = "questionDifficulty"></input>
-    <input ng-model = "questionType"></input> -->
-
     <ul ng-repeat="trivia in trivias">
-
-        <li>{{trivia.question}}</li>
-        <li><button id = 'ok'>{{trivia.correct_answer}}</button><!--{{trivia.incorrect_answers}}--></li>
+      <li>{{trivia.question}}</li>
+      <li><button id = 'ok'>{{trivia.correct_answer}}</button></li>
       <div ng-repeat="incorrect in trivia.incorrect_answers">
                 <li><button id = 'ok'>{{incorrect}}</button></li>
       </div>
     </ul>
 </div>
-<!-- <script src="angular.js"></script>  -->
+<script src="angular.js"></script>
 </body>
+<footer>
+  Built by Rommel Lagurin
+</footer>
 </html>
