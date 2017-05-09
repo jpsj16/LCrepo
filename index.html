@@ -65,8 +65,8 @@
               <md-option value="28"> Vehicles </md-option>
               <md-option value="29"> Entertainment: Comics </md-option>
               <md-option value="30"> Science: Gadgets </md-option>
-              <md-option value="31"> Entertainment: Japanese Anime & Manga </md-option>
-              <md-option value="32"> Entertainment: Cartoon & Animations </md-option>
+              <md-option value="31"> Entertainment: Japanese Anime and Manga </md-option>
+              <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
               <md-option value="31"> Entertainment: Japanese Anime and Manga </md-option>
               <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
               <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
@@ -90,6 +90,9 @@
             </md-select>
           </div>
 
+          <md-button class="md-raised" ng-model="btnPlay">PLAY</md-button>
+          <div ng-show="=btnPlay">
+
           <ul ng-repeat="trivia in trivias">
             <div>{{trivia.question}}</div>
             <div ><button>{{trivia.correct_answer}}</button></div>
@@ -98,7 +101,7 @@
                   <div><button >{{incorrect}}</button></div>
             </div>
           </ul>
-
+  </div>
         </md-card-content>
 
 
