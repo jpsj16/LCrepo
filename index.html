@@ -15,7 +15,11 @@
 </head>
 
 <body>
-  <div ng-controller="QuizCtrl" ng-cloak="" class="navBardemoBasicUsage">
+  <md-button ng-click='open=!open'>
+    Developer
+  </md-button>
+
+  <div ng-hide='open' ng-controller="QuizCtrl" ng-cloak="" class="navBardemoBasicUsage">
 
     <md-content class="md-padding">
       <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
@@ -29,7 +33,8 @@
           Developer
         </md-nav-item>
       </md-nav-bar>
-
+      <div ng-show='open' ng-controller="AboutCtrl">
+      <!-- </div> -->
       <div class="ext-content">
         <md-card-content>
           <div layout="row" layout-align="space-between center">
@@ -67,9 +72,6 @@
               <md-option value="30"> Science: Gadgets </md-option>
               <md-option value="31"> Entertainment: Japanese Anime and Manga </md-option>
               <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
-              <md-option value="31"> Entertainment: Japanese Anime and Manga </md-option>
-              <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
-              <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
             </md-select>
           </div>
 
@@ -90,30 +92,31 @@
             </md-select>
           </div>
 
-          <md-button class="md-raised" ng-model="btnPlay">PLAY</md-button>
-          <div ng-show="=btnPlay">
-
+          <!-- <md-button class="md-raised" ng-click="toggle()">PLAY</md-button> -->
+          <!-- <div ng-show="=btnPlay"  class="ng-show"> -->
           <ul ng-repeat="trivia in trivias">
             <div>{{trivia.question}}</div>
-            <div ><button>{{trivia.correct_answer}}</button></div>
+            <div><button>{{trivia.correct_answer}}</button></div>
 
             <div ng-repeat="incorrect in trivia.incorrect_answers">
-                  <div><button >{{incorrect}}</button></div>
+              <div><button>{{incorrect}}</button></div>
             </div>
           </ul>
-  </div>
+          <!-- </div> -->
         </md-card-content>
+        </div>
+      </div>
+    </md-content>
+  </div>
 
+  <!-- <div ng-show='open' ng-controller="AboutCtrl"> -->
+    <h1> {{ title }} </h1>
+  <!-- </div> -->
 
-  </md-content>
-</div>
-
-<script src="angular.js"></script>
+  <script src="angular.js"></script>
 </body>
 <footer>
-  Built by:
-  Rommel Lagurin
-  Monique Noche
-  Hyacinth Briones
+  Built by: Rommel Lagurin Monique Noche Hyacinth Briones
 </footer>
+
 </html>
