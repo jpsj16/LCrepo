@@ -33,8 +33,7 @@
           Developer
         </md-nav-item>
       </md-nav-bar>
-      <div ng-show='open' ng-controller="AboutCtrl">
-      <!-- </div> -->
+
       <div class="ext-content">
         <md-card-content>
           <div layout="row" layout-align="space-between center">
@@ -104,14 +103,14 @@
           </ul>
           <!-- </div> -->
         </md-card-content>
-        </div>
+
       </div>
     </md-content>
   </div>
 
-  <!-- <div ng-show='open' ng-controller="AboutCtrl"> -->
+  <div ng-show='open' ng-controller="AboutCtrl">
     <h1> {{ title }} </h1>
-  <!-- </div> -->
+  </div>
 
   <script src="angular.js"></script>
 </body>
