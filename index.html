@@ -17,7 +17,6 @@
 <body>
   <div ng-controller="QuizCtrl" ng-cloak="" class="navBardemoBasicUsage">
 
-
     <md-content class="md-padding">
       <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
         <md-nav-item md-nav-click="Quiz" name="QUIZ">
@@ -26,8 +25,8 @@
         <md-nav-item md-nav-click="About" name="ABOUT">
           About
         </md-nav-item>
-        <md-nav-item md-nav-click="Contacts" name="CONTACTS">
-          Contacts
+        <md-nav-item md-nav-click="Developer" name="DEVELOPER">
+          Developer
         </md-nav-item>
       </md-nav-bar>
 
@@ -44,7 +43,6 @@
           <div layout="row" layout-align="space-between center">
             <span>Select a Category</span>
             <md-select ng-model="category" placeholder="Category" class="md-no-underline">
-              <md-option value="8">Any</md-option>
               <md-option value="9">General Knowledge </md-option>
               <md-option value="10"> Entertainment: Books </md-option>
               <md-option value="11"> Entertainment: Film </md-option>
@@ -67,6 +65,8 @@
               <md-option value="28"> Vehicles </md-option>
               <md-option value="29"> Entertainment: Comics </md-option>
               <md-option value="30"> Science: Gadgets </md-option>
+              <md-option value="31"> Entertainment: Japanese Anime & Manga </md-option>
+              <md-option value="32"> Entertainment: Cartoon & Animations </md-option>
               <md-option value="31"> Entertainment: Japanese Anime and Manga </md-option>
               <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
               <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
@@ -76,7 +76,6 @@
           <div layout="row" layout-align="space-between center">
             <span>Select Difficulty</span>
             <md-select ng-model="difficulty" placeholder="Difficulty" class="md-no-underline">
-              <md-option value="anyDifficulty">Any</md-option>
               <md-option value="easy">Easy</md-option>
               <md-option value="medium">Medium </md-option>
               <md-option value="hard">Hard</md-option>
@@ -93,16 +92,15 @@
 
           <ul ng-repeat="trivia in trivias">
             <div>{{trivia.question}}</div>
-
-            <div><button>{{trivia.correct_answer}}</button></div>
+            <div ><button>{{trivia.correct_answer}}</button></div>
 
             <div ng-repeat="incorrect in trivia.incorrect_answers">
-              <div><button>{{incorrect}}</button></div>
+                  <div><button >{{incorrect}}</button></div>
             </div>
           </ul>
 
         </md-card-content>
-      </div>
+
 
   </md-content>
 </div>

@@ -1,10 +1,11 @@
+
 function AppCtrl($scope) {
   $scope.currentNavItem = 'Quiz';
 }
 
 angular.module('MyApp', ['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
-  .controller("QuizCtrl", function($scope, $http) {
 
+  .controller("QuizCtrl", function($scope, $http) {
     $scope.$watch("amount", function() {
       });
       $scope.$watch("category", function() {
