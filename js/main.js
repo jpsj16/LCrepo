@@ -14,7 +14,7 @@ angular
     });
     function returnSearch() {
       $http.get("https://opentdb.com/api.php?amount=" + $scope.questionAmount + "&category=" + $scope.questionCategory +"&difficulty=" + $scope.questionDifficulty + "&type=" + $scope.questionType).then(function(p) {
-          console.log(p.data.results);
+          console.log(p.data.responsecode);
           //regular expression converter
           let array = p.data.results;
           array.forEach(function(item) {
