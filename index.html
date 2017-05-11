@@ -1,7 +1,9 @@
 <html ng-app="MyApp">
 
 <head>
+
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster|Raleway:400,200' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css">
 
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
@@ -12,17 +14,24 @@
   <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
   <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.4/angular-material.js'></script>
   <script src="js/main.js"></script>
+
 </head>
 
 <body>
-  <!-- <div ng-controller='TimeCtrl'>
-      <p>{{ clock  | date:'medium'}}</p>
-  </div> -->
+  <div class="container" layout="row" layout-xs="column" >
+  <div flex>
+      <p class="logo"> Trivia Master Challenge </p>
+  </div>
+    <div flex="8">
+      <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+       <md-icon md-svg-src="img/icons/ic_people_24px.svg"></md-icon>
+     </md-button>
+       </div>
+  </div>
   <div  ng-controller="QuizCtrl" ng-cloak="" class="navBardemoBasicUsage">
     <md-content class="md-padding">
-      <div class="ext-content">
+      <div class="text-content">
         <md-card-content>
-
           <div layout="row" layout-align="space-between center">
             <span>Number of Questions</span>
             <md-select ng-model="amount" placeholder="No. of Questions" class="md-no-underline">
@@ -56,8 +65,8 @@
               <md-option value="28"> Vehicles </md-option>
               <md-option value="29"> Entertainment: Comics </md-option>
               <md-option value="30"> Science: Gadgets </md-option>
-              <md-option value="31"> Entertainment: Japanese Anime and Manga </md-option>
-              <md-option value="32"> Entertainment: Cartoon and Animations </md-option>
+              <md-option value="31"> Entertainment: Japanese Anime & Manga </md-option>
+              <md-option value="32"> Entertainment: Cartoon & Animations </md-option>
             </md-select>
           </div>
 
@@ -78,44 +87,28 @@
             </md-select>
           </div>
 
+
           <md-button class="md-raised" ng-click='open=!open'>
             Play
           </md-button>
 
-  <div ng-show='open'ng-controller="AboutCtrl">
-          <ul ng-repeat="trivia in trivias">
-            <div>{{trivia.question}}</div>
-            <div><button>{{trivia.correct_answer}}</button></div>
+            <div ng-show='open' ng-controller="AboutCtrl">
+                <ul ng-repeat="trivia in trivias">
+                    <div>{{trivia.question}}</div>
+                    <div><md-button class="md-raised" id="correctchoice">{{trivia.correct_answer}}</md-button></div>
 
-            <div ng-repeat="incorrect in trivia.incorrect_answers">
-              <div><button>{{incorrect}}</button></div>
+                    <div ng-repeat="incorrect in trivia.incorrect_answers">
+                        <div><md-button class="md-raised" id="incorrectchoice">{{incorrect}}</md-button></div>
+                  </div>
+                </ul>
             </div>
-          </ul>
-
-</div>
-        </md-card-content>
-</div>
-</md-content>
-</div>
-
-
-
-
-</div>
 
         </md-card-content>
-</div>
-
-    </md-content>
-  </div>
-
-
-  <!-- <div ng-show='open' ng-controller="AboutCtrl"> -->
-    <h1> {{ title }} </h1>
-  <!-- </div> -->
 
   <script src="angular.js"></script>
+</div>
 </body>
 <footer>
   Built by: Rommel Lagurin Monique Noche Hyacinth Briones
 </footer>
+</html>
